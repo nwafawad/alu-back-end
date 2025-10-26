@@ -1,16 +1,11 @@
 #!/usr/bin/python3
-"""Python script that fetches and displays an employee's ToDo list
+"""
+Python script that fetches and displays an employee's ToDo list
 progress from a REST API.
-
-This module queries the JSONPlaceholder test API for a user and that user's
-todo items, then prints how many tasks are completed and the titles of the
-completed tasks.
 """
 
 import requests
 import sys
-
-
 
 if __name__ == "__main__":
     emp_id = int(sys.argv[1])

@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+"""This module exports an employee's ToDo list progress to a CSV file."""
+
 import csv
 import requests
+
 import sys
+
 
 if __name__ == "__main__":
     emp_id = int(sys.argv[1])
@@ -18,4 +22,11 @@ if __name__ == "__main__":
     with open(filename, mode="w", newline="") as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in todos:
-            writer.writerow([emp_id, username, task.get("completed"), task.get("title")])
+            writer.writerow(
+                [
+                    emp_id,
+                    username,
+                    task.get("completed"),
+                    task.get("title"),
+                ]
+            )
