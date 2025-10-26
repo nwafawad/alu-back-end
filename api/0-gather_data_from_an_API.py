@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 import requests
 import sys
+
 # Python script that fetches and displays an employee’s ToDo list progress from a REST API
+
 if __name__ == "__main__":
     emp_id = int(sys.argv[1])
 
